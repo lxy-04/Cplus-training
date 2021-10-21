@@ -17,7 +17,7 @@ void quicksort(int A[],int l,int r){
 
 int main(){
    int A[10];
-   int B[20];
+   int B[30];
    for(int i=0;i<10;i++) A[i]=10-i;
    for(int i=0;i<10;i++) cout<<A[i]<<' ';
    cout<<endl;
