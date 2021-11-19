@@ -3,6 +3,7 @@
         "string.h": "c",
         "iostream": "cpp",
         "ostream": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "new": "cpp"
     }
 }
