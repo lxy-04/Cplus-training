@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum color {red,yellow};
+enum color {red, yellow};
 
 typedef struct stu_
 {
