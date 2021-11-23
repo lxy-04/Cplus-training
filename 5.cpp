@@ -4,26 +4,47 @@
 
 using namespace std;
 
-struct CandyBar
+struct Car
 {
-    string name;
-    double weight;
-    int cal;
+    string prod_name;
+    int prod_year;
 };
+
+void prod_name_get(Car* p_car, int car_num){
+        cout << "Enter the make: ";
+        getline(cin, p_car[car_num].prod_name);
+};
+
+void prod_year_get(Car* p_car, int car_num){
+        cout << "Enter the year made: ";
+        cin >> p_car[car_num].prod_year;
+        cin.get();
+};
+
+void print(Car* p_car, int car_num){
+    for (int i = 0; i < car_num; i++)
+    {
+        cout << p_car[i].prod_year << " " << p_car[i].prod_name << endl;
+    }
+}
 
 int main (void){
 
-    CandyBar* p_snacks = new CandyBar[3];
-    p_snacks[1].name = "q";
-    p_snacks[1].weight = 20.3;
-    p_snacks[1].cal = 100;
-    cout << "snacks[1] name is: " << (p_snacks+1)->name << endl;
-    delete []p_snacks;
+    int car_num;
+    cout << "Enter the number of car" << endl;
+    cin >> car_num;
+    cin.get();
+    Car *p_car = new Car[car_num];
 
-    CandyBar snack = {"Mocha Munch", 2.3, 350};
-    cout << "snack name is: " << snack.name << endl;
-    cout << "snack weight is: " << snack.weight << endl;
-    cout << "snack cal is: " << snack.cal << endl;
+    for (int i = 0; i < car_num; i++)
+    {
+        cout << "car #" << i << endl;
+        prod_name_get(p_car, i);
+        prod_year_get(p_car, i);
+    }
+    print(p_car, car_num);
 
+    delete []p_car;
+    
     return 0;
 }
