@@ -6,6 +6,8 @@
         "cstring": "cpp",
         "new": "cpp",
         "typeinfo": "c",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp"
     }
 }
