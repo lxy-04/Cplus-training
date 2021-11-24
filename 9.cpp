@@ -18,15 +18,16 @@ int main(void){
     // }
 
     // cout << "count is " << count << endl;
-    color your_color;
-    your_color = yellow;
-    if (your_color == yellow)
-    {
-        cout << "your color is " << your_color << endl;
-    }
+    // color your_color;
+    // your_color = yellow;
+    // switch (your_color)
+    // {
+    // case yellow:
+    //     cout << "color is yellow" << endl;
+    //     break;
     
-    
-    
-
+    // default:
+    //     break;
+    // }
     return 0;
 }

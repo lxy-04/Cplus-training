@@ -51,8 +51,8 @@ int main(){
         "lixiaoyu"
     };
     printf("%s\n", s[1]);
-    color yesa;
-    
+
+
 
     return 0;
 }

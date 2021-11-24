@@ -20,7 +20,11 @@ void prod_year_get(Car* p_car, int car_num){
         cin >> p_car[car_num].prod_year;
         cin.get();
 };
-
+/**
+*@brief 显示函数
+*@param p_car 汽车动态数组指针
+*@param car_num 汽车数量
+*/
 void print(Car* p_car, int car_num){
     for (int i = 0; i < car_num; i++)
     {
@@ -31,7 +35,7 @@ void print(Car* p_car, int car_num){
 int main (void){
 
     int car_num;
-    cout << "Enter the number of car" << endl;
+    cout << "Enter the number of car: ";
     cin >> car_num;
     cin.get();
     Car *p_car = new Car[car_num];
@@ -45,6 +49,6 @@ int main (void){
     print(p_car, car_num);
 
     delete []p_car;
-    
+
     return 0;
 }

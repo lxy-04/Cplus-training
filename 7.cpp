@@ -3,16 +3,27 @@
 #include <string>
 #include <ctime>
 
+const int MAX = 5;
+
 using namespace std;
 
 int main(void){
 
-    char *s[2] = {
-        "hello",
-        "world"
-    };
+    double fish[5];
+    int i = 0;
 
-    cout << "done" << endl;
+    cout << "Enter the weight of " << MAX << " fish" << endl;
+    cout << "fish #1" << ": ";
+    while (i < MAX && cin >> fish[i])
+    {
+
+        if (++i < MAX)
+        {
+            cout << "fish #" << i+1 << ": ";
+        }
+        
+    }
+    
     
     return 0;
 }
