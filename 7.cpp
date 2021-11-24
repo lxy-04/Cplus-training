@@ -14,9 +14,16 @@ int main(void){
 
     cout << "Enter the weight of " << MAX << " fish" << endl;
     cout << "fish #1" << ": ";
-    while (i < MAX && cin >> fish[i])
+    while (i < MAX)
     {
 
+        while (!(cin >> fish[i]))
+        {
+            cout << "ERROR! Enter again " << endl;
+            cout << "fish #" << i+1 << ": ";
+            cin.clear();
+            while (cin.get() != '\n');
+        }
         if (++i < MAX)
         {
             cout << "fish #" << i+1 << ": ";
