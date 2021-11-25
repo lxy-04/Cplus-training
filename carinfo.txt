@@ -1,0 +1,4 @@
+the d_price is : 12325.5
+the a_price is : 13500
+the year is : 2009
+the make is : audi

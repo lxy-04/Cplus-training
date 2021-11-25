@@ -8,6 +8,7 @@
         "typeinfo": "c",
         "algorithm": "cpp",
         "*.tcc": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iosfwd": "cpp"
     }
 }
