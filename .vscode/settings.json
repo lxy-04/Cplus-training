@@ -9,6 +9,7 @@
         "algorithm": "cpp",
         "*.tcc": "cpp",
         "istream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "array": "cpp"
     }
 }

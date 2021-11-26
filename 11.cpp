@@ -25,13 +25,18 @@ int main(void){
     int count = 0;
     double value;
     double sum = 0.0;
-    inFile >> value;
-    while (inFile.good())
+    while (inFile >> value)
     {
         ++count;
         sum += value;
-        inFile >> value;
     }
+    // inFile >> value;
+    // while (inFile.good())
+    // {
+    //     ++count;
+    //     sum += value;
+    //     inFile >> value;
+    // } 
 
     if (inFile.eof())
     {
