@@ -26,7 +26,7 @@ int main(void){
     a4 = a3;
 
     int n = 5;
-    while (n-- > 0)
+    while (n-- != 0)
     {
         cout << n << endl;
     }
