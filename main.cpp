@@ -28,6 +28,12 @@ void show(const int *s){
     printf("FIRST LETTER IS %d\n", s[1]);
 }
 
+void show(char *s[]){
+
+    cout << "first is " << s[1] << endl;
+
+}
+
 int main(){
   
     // int a = 10;
@@ -50,7 +56,8 @@ int main(){
         "world",
         "lixiaoyu"
     };
-    printf("%s\n", s[1]);
+    //printf("%s\n", s[1]);
+    show(s);
 
 
 
