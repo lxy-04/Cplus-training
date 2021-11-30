@@ -1,25 +1,33 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 
 using namespace std;
 
-double &cube(double& x);
+template <typename T>
+void _swap(T &a, T &b);
 
 int main(void){
 
-    double a = 10; 
-    double b= cube(a);
-    b++;
-    cout << "a is: " << a << endl;
-    cout << "b is: " << b << endl;
-    double &c = b;
-    double &d = b;
-    c++;
-    cout << "d is: " << d << endl;
-
+    int i = 10;
+    int j = 20;
+    _swap<int>(i, j);
+    cout << "i is: " << i << endl;
+    cout << "j is: " << j << endl;
+    double i_d = 10.2;
+    double j_d = 20.2;
+    _swap<double>(i_d, j_d);
+    cout << "i is: " << i_d << endl;
+    cout << "j is: " << j_d << endl;
+    return 0;
 }
 
-double &cube(double& x){
-    x++;
-    return x;
+template <typename T>
+void _swap(T &a, T &b){
+
+    T tmp;
+    tmp = a;
+    a = b;
+    b = tmp;
+
 }
