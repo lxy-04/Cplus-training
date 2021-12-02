@@ -1,2 +1,1 @@
-
-    Fill_array(array, SIZE);
+int j = 20;
