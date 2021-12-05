@@ -1,8 +1,8 @@
 #include <string>
 #include <iostream>
-#include "stock00.h"
+#include "stock01.h"
 
-void Stock::acquire(const std::string &co, long n, double pr)
+Stock::Stock(const std::string &co, long n, double pr)
 {
     using std::cout;
     using std::endl;
@@ -17,6 +17,12 @@ void Stock::acquire(const std::string &co, long n, double pr)
     share_val = pr;
     set_tot();
     
+}
+Stock::Stock()
+{
+    company = "no name";
+    share_val = 0;
+    shares = 0;
 }
 
 void Stock::buy(long num, double price)
@@ -63,8 +69,8 @@ void Stock::show()
 {
     using std::endl;
     using std::cout;
-    cout << "company is   " << company << endl;
-    cout << "share is     " << shares  << endl;
+    cout << "company   is " << company << endl;
+    cout << "share     is " << shares  << endl;
     cout << "share_val is " << share_val << endl;
     cout << "total_val is " << total_val << endl;
     cout << endl;
