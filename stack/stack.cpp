@@ -47,22 +47,24 @@ bool Stack::push(const Item num)
     }
 }
 
-Item Stack::pop()
+bool Stack::pop(Item &pop_num)
 {
-    Item pop_num;
     if (isempty())
     {
         cout << "Stack is empty, cannot pop" << endl;
+        return false;
     }else
     {
         pop_num = item[--top];
-        return pop_num;
+        return true;
     }
     
 }
 
 void Stack::show() const
 {
+    cout << endl;
+    cout << "Show the Stack." << endl;
     for (int i = 0; i < top; i++)
     {
         cout << "Skack[" << i << "] is " << item[i] << endl;

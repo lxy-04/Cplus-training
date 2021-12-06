@@ -9,6 +9,7 @@ int main(void)
 {
     char ch;
     Item push_num;
+    Item pop_num;
     Stack Stack;
 
     tips();
@@ -16,8 +17,8 @@ int main(void)
     {
         if (toupper(ch) == 'A')
         {
-            Item _pop_num = Stack.pop();
-            cout << _pop_num << " pop." << endl;
+            Stack.pop(pop_num);
+            cout << pop_num << " pop." << endl;
         }else if (toupper(ch) == 'P')
         {
             cout << "Enter a num to push" << endl;

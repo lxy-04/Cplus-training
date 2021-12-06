@@ -6,7 +6,7 @@ typedef int Item;
 class Stack
 {
 private:
-    static const int SIZE = 10;
+    static const int SIZE = 5;
     Item item[SIZE];
     int top;
 public:
@@ -14,7 +14,7 @@ public:
     bool isempty() const;
     bool isfull() const;
     bool push(const Item num);
-    Item pop();
+    bool pop(Item &pop_num);
     void show() const;
 };
 
