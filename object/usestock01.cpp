@@ -9,7 +9,11 @@ int main(void)
     Cat.show();
     Stock Dog = Stock("xiaoyu", 30, 3.34);
     Dog.show();
-    Stock Stock2;
-    Stock2.show();
+    const Stock top = Cat.topvalue(Dog);
+    top.show();
+    
+
+
+
     return 0;
 }

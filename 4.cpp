@@ -15,14 +15,15 @@ int main(void){
     // cin >> last_name;
     // cout << "Here's " << first_name << ", " << last_name << endl;
 
-    string first_name_st;
-    string last_name_st;
+    // string first_name_st;
+    // string last_name_st;
     
-    cout << "Enter your first name: " ;
-    getline(cin, first_name_st);
-    cout << "Enter your last name: " ; 
-    getline(cin, last_name_st);
-    cout << "Here's " << first_name_st << ", " << last_name_st << endl;
-
+    // cout << "Enter your first name: " ;
+    // getline(cin, first_name_st);
+    // cout << "Enter your last name: " ; 
+    // getline(cin, last_name_st);
+    // cout << "Here's " << first_name_st << ", " << last_name_st << endl;
+    //char ch = 50;
+    cout << (char)50 << endl;
     return 0;
 }

@@ -25,6 +25,24 @@ Stock::Stock()
     shares = 0;
 }
 
+Stock::~Stock()
+{
+    //std::cout << "bye." << company << std::endl;
+}
+
+const Stock &Stock::topvalue(const Stock &s) const
+{
+    
+    if (s.total_val > this->total_val)
+    {
+        return s;
+    }else
+    {
+        return *this;
+    }
+    
+}
+
 void Stock::buy(long num, double price)
 {
     using std::cout;
@@ -65,7 +83,7 @@ void Stock::update(double price)
     set_tot();
 }
 
-void Stock::show()
+void Stock::show() const
 {
     using std::endl;
     using std::cout;

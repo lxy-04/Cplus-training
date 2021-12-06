@@ -14,10 +14,12 @@ private:
 public:
         Stock(const std::string &co, long n, double pr);
         Stock();
+        ~Stock();
+        const Stock &topvalue(const Stock &s) const;
         void buy(long num, double price);
         void sell(long num, double price);
         void update(double price);
-        void show();
+        void show() const;
 };
 
 inline void Stock::set_tot()
