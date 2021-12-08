@@ -67,7 +67,9 @@ void Stack::show() const
     cout << "Show the Stack." << endl;
     for (int i = 0; i < top; i++)
     {
-        cout << "Skack[" << i << "] is " << item[i] << endl;
+        cout << "Skack[" << i << "].fullname is " << item[i].fullname << endl;
+        cout << "Skack[" << i << "].payment is " << item[i].payment << endl;
+        cout << endl;
     }
 }
 

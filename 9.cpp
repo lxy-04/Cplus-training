@@ -29,5 +29,10 @@ int main(void){
     // default:
     //     break;
     // }
+    int a[3] = {1, 2, 4};
+    int (*pf)[3] = &a;
+    cout << (*pf)[1] << endl;
+
+
     return 0;
 }

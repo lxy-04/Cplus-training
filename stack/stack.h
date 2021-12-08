@@ -1,7 +1,14 @@
 #ifndef _STACK_H_
 #define _STACK_H_
 
-typedef int Item;
+struct customer
+{
+    char fullname[35];
+    double payment;
+};
+
+
+typedef customer Item;
 
 class Stack
 {
