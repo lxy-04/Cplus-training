@@ -27,11 +27,6 @@ void Time::Reset(const int h, const int m)
     hours = h;
     minutes = m;
 }
-void Time::Show() const
-{
-    cout << "hours is " << hours << endl;
-    cout << "minutes is " << minutes << endl;
-}
 Time Time::operator+(const Time &t) const
 {
     Time sum;
@@ -69,4 +64,17 @@ Time Time::operator*(const double rad) const
     result.hours = result.minutes / 60;
     result.minutes %= 60;
     return result;
+}
+Time operator*(const double rad, const Time &t) 
+{
+    Time result;
+    result.minutes = t.hours * rad * 60 + t.minutes * rad;
+    result.hours = result.minutes / 60;
+    result.minutes %= 60;
+    return result;
+}
+ostream& operator<<(ostream &os, const Time &t)
+{
+    cout << "hours: " << t.hours << " minuts: " << t.minutes << endl; 
+    return os;
 }

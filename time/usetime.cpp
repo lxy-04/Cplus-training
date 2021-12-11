@@ -10,6 +10,6 @@ int main(void)
     Time Time4(2, 23);
     Time Time3;
     Time3 = Time1 * 2.3;
-    Time3.Show();
+    cout << Time3 << Time1;
     return 0;
 }

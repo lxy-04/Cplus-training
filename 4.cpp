@@ -4,6 +4,8 @@
 
 using namespace std;
 
+double cube(double &ra);
+
 int main(void){
     
     // char first_name[80];
@@ -24,6 +26,13 @@ int main(void){
     // getline(cin, last_name_st);
     // cout << "Here's " << first_name_st << ", " << last_name_st << endl;
     //char ch = 50;
-    cout << (char)50 << endl;
+    double a = 10.2;
+    double b = cube(a);
+    cout << b << endl;
     return 0;
+}
+double cube(double &ra)
+{
+    ra = ra * ra * ra;
+    return ra;
 }
