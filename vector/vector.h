@@ -2,7 +2,7 @@
 #define _VECTOR_H_
 #include <iostream>
 
-using namespace std;
+//using namespace std;
 
 namespace VECTOR
 {
@@ -40,8 +40,9 @@ namespace VECTOR
         Vector operator-(const Vector &v) const;
         Vector operator-() const;
         Vector operator*(const double rad) const;
+        Vector &operator+=(const Vector &v);
         friend Vector operator*(const double rad, const Vector &v);
-        friend ostream &operator<<(ostream &os, const Vector &v);
+        friend std::ostream &operator<<(std::ostream &os, const Vector &v);
     };
     
 }

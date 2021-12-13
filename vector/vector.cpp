@@ -108,6 +108,11 @@ namespace VECTOR
     {
         return Vector(rad * x, rad * y);
     }
+    Vector &Vector::operator+=(const Vector&v)
+    {
+        this->reset(x + v.x, y + v.x, mode);
+        return *this;
+    }
     Vector operator*(const double rad, const Vector &v)
     {
         //return Vector(rad * v.x, rad * v.y);
