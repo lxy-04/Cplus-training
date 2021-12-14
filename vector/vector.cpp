@@ -113,6 +113,14 @@ namespace VECTOR
         this->reset(x + v.x, y + v.x, mode);
         return *this;
     }
+    Vector::operator double() const
+    {
+        return len;
+    }
+    Vector::operator int() const
+    {
+        return (int)(len + 0.5);
+    }
     Vector operator*(const double rad, const Vector &v)
     {
         //return Vector(rad * v.x, rad * v.y);
@@ -122,10 +130,11 @@ namespace VECTOR
     {
         if (v.mode == Vector::RECT)
         {
-           os << "x is " << v.x << " y is " << v.y << endl;
+
+           os << "(x,y) = " << "(" << v.x << ", " << v.y << ")" << endl;
         }else if (v.mode == Vector::POL)
         {
-            os << "len is " << v.len << " theta is " << v.theta << endl;
+            os << "(m,a) = " << "(" << v.len << ", " << v.theta << ")" << endl;
         }else
         {
             os << "ERROR OUTPUT!" << endl;

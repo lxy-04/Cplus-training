@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double cube(double &ra);
+double &cube(double &ra);
 
 int main(void){
     
@@ -27,12 +27,19 @@ int main(void){
     // cout << "Here's " << first_name_st << ", " << last_name_st << endl;
     //char ch = 50;
     double a = 10.2;
-    double b = cube(a);
-    cout << b << endl;
+    double &b = cube(a);
+    cout << "b at " << &b << endl;
+    cout << "a at " << &a << endl;
+    // int a = 10;
+    // int *pa;
+    // pa = &a;
+    // cout << "pa at " << pa << endl;
+    // cout << "a  at " << &a << endl; 
     return 0;
 }
-double cube(double &ra)
+double& cube(double &ra)
 {
-    ra = ra * ra * ra;
-    return ra;
+    double *pa;
+    *pa = ra;
+    return *pa;
 }

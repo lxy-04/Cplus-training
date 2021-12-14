@@ -41,6 +41,8 @@ namespace VECTOR
         Vector operator-() const;
         Vector operator*(const double rad) const;
         Vector &operator+=(const Vector &v);
+        operator double() const;
+        operator int() const;
         friend Vector operator*(const double rad, const Vector &v);
         friend std::ostream &operator<<(std::ostream &os, const Vector &v);
     };
