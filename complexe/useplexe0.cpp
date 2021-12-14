@@ -8,6 +8,10 @@ int main()
 {
     Complexe a(3.0, 4.0);
     Complexe c;
+    Complexe d = a;
+    cout << d << endl;
+    cout << "a at " << &a << endl;
+    cout << "d at " << &d << endl;
     cout << "Enter a complex number (q to quit)." << endl;
     while (cin >> c)
     {
