@@ -15,12 +15,6 @@ namespace STRINGGOOD
         str[0] = '\0';
         ++stringgood_num;
     }
-    stringgood::~stringgood()
-    {
-        delete []str;
-        --stringgood_num;
-        cout << stringgood_num << " strings left." << endl;
-    }
     stringgood::stringgood(const char *s)
     {
         len = strlen(s);
@@ -34,6 +28,12 @@ namespace STRINGGOOD
         str = new char[len + 1];
         strcpy(str, s.str);
         ++stringgood_num;
+    }
+    stringgood::~stringgood()
+    {
+        delete []str;
+        --stringgood_num;
+        cout << stringgood_num << " strings left." << endl;
     }
     stringgood& stringgood::operator=(const stringgood& s)
     {

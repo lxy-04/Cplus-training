@@ -18,6 +18,7 @@ namespace STRINGBAD
         stringbad(const char *s);
         stringbad(const stringbad& s);
         ~stringbad();
+        int howmany(){return stringbad_num;}
         friend ostream &operator<<(ostream &os, const stringbad &s);
         stringbad &operator=(const stringbad &s);
     };

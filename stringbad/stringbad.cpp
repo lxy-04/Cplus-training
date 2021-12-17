@@ -45,7 +45,7 @@ namespace STRINGBAD
         len = s.len;
         str = new char[len + 1];
         strcpy(str, s.str);
-        ++stringbad_num;
+        cout << "1" << endl;
         return *this;
     }
     ostream &operator<<(ostream &os, const stringbad &s)
