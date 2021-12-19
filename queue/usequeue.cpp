@@ -24,9 +24,6 @@ int main()
         Queue1.dequeue(tmp);
         cout << Queue1;
     }
-    
-    
-    
 
     return 0;
 }

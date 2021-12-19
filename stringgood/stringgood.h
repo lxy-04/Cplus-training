@@ -21,6 +21,10 @@ namespace STRINGGOOD
         int length() const{return len;}
         const char& operator[](int i) const;
         char &operator[](int i);
+        stringgood &stringlow();
+        stringgood &stringup();
+        int char_num(char c) const; 
+        stringgood operator+( const stringgood &s);
         friend bool operator<(const stringgood &s1, const stringgood &s2);
         friend bool operator>(const stringgood &s1, const stringgood &s2);
         friend bool operator==(const stringgood &s1, const stringgood &s2);

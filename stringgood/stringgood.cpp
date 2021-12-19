@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <cctype>
 #include "stringgood.h"
 
 using namespace std;
@@ -33,7 +34,7 @@ namespace STRINGGOOD
     {
         delete []str;
         --stringgood_num;
-        cout << stringgood_num << " strings left." << endl;
+        //cout << stringgood_num << " strings left." << endl;
     }
     stringgood& stringgood::operator=(const stringgood& s)
     {
@@ -54,6 +55,42 @@ namespace STRINGGOOD
         str = new char[len+1];
         strcpy(str, s);
         return *this;
+    }
+    stringgood stringgood::operator+(const stringgood& s)
+    {
+        int merge_len = len + s.len + 1;
+        char *p = new char[merge_len];
+        strncpy(p, str, len);
+        strcpy(p + len, s.str);
+        return stringgood(p);
+    }
+    stringgood& stringgood::stringlow()
+    {
+        for (int i = 0; i < len; i++)
+        {
+            str[i] = tolower(str[i]);    
+        }
+        return *this;
+    }
+    stringgood& stringgood::stringup()
+    {
+        for (int i = 0; i < len; i++)
+        {
+            str[i] = toupper(str[i]);    
+        }
+        return *this;
+    }
+    int stringgood::char_num(char c) const
+    {
+        int count = 0;
+        for (int i = 0; i < len; i++)
+        {
+            if (str[i] == c)
+            {
+               ++count;
+            }
+        }
+        return count;
     }
     char &stringgood::operator[](int i)
     {

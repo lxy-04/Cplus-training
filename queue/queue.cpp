@@ -63,6 +63,12 @@ ostream &operator<<(ostream &os, const Queue &q)
 {
     Queue::Node *tmp = q.front;
     int a = 0;
+    if (tmp == nullptr)
+    {
+        os << "empty" << endl;
+        return os;
+    }
+    
     while (tmp != nullptr)
     {
         a++;
