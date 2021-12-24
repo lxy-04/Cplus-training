@@ -6,6 +6,7 @@ using namespace std;
 int main(void)
 {
     List list;
+    List list2;
     Item num;
     for (int i = 0; i < 3; i++)
     {
@@ -14,6 +15,8 @@ int main(void)
         list.add(num);
         list.visit(visit_item);
     }
+    list2 = list;
+    list2.visit(visit_item);
     
     return 0;
 }
