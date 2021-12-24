@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -11,10 +12,14 @@ int main(void)
     int *p = b;
     cout << p[2] << endl;
     cout << *(b+1) << endl;
+    char a1[30] = "lixiaoyu";
+    char *b1 = "sunziyan";
+    strcpy(a1, b1);
+    cout << a1 << endl;
     return 0;
 }
 
 void show(int (*a)[3])
 {
-    cout << *(a[0] + 1) << endl;
+    cout << (*(a+1))[2] << endl;
 }
