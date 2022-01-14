@@ -28,7 +28,8 @@ ostream& operator<<(ostream &os, const Student& st)
         int i;
         for (i = 0; i < ((const arraydb &)st).size(); i++)
         {
-            os << ((const arraydb &)st).operator[](i) << " ";
+           // os << ((const arraydb &)st).operator[](i) << " ";
+           os << st[i] << " ";
             if (i % 5 == 4)
             {
                 os << endl;

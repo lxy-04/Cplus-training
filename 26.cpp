@@ -13,7 +13,7 @@ int main(void)
     cout << p[2] << endl;
     cout << *(b+1) << endl;
     char a1[30] = "lixiaoyu";
-    char *b1 = "sunziyan";
+    const char *b1 = "sunziyan";
     strcpy(a1, b1);
     cout << a1 << endl;
     return 0;
