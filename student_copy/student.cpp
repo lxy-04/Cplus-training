@@ -23,6 +23,7 @@ const string &Student::Name() const
 ostream& operator<<(ostream &os, const Student& st)
 {
     os << st.name << "'s scores: " << endl;
+    os << (const string&)st << endl;
     if (st.scores.size() > 0)
     {
         int i;

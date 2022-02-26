@@ -6,7 +6,7 @@
 using namespace std;
 
 const int pupils = 3;
-const int quizzes = 5;
+const int quizzes = 2;
 
 void set(Student& s, int n);
 int main()
