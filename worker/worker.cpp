@@ -4,13 +4,13 @@
 
 using namespace std;
 
-void Worker::Show() const
+void Worker::Data() const
 {
     cout << "fullname is " << fullname << endl;
     cout << "id       is " << id       << endl;
 }
 
-void Worker::Set()
+void Worker::Get()
 {
     cout << "Enter the fullname: " << endl;
     getline(cin, fullname);
@@ -19,25 +19,35 @@ void Worker::Set()
     while (cin.get() != '\n');
 }
 
-void Singer::Set()
+void Singer::Get()
 {
-    Worker::Set();
     cout << "Enter the panache: " << endl;
     cin >> panache;
     while (cin.get() != '\n');
 }
 
-void Singer::Show() const
+void Singer::Data() const
 {
-    Worker::Show();
     cout << "panache  is " << panache << endl;
 }
 
+void Singer::Set() 
+{
+    Worker::Get();
+    Get();
+}
+
+void Singer::Show() const
+{
+    Worker::Data();
+    Data();
+}
+
+
 const char* Waiter::pv[] = {"other", "alto", "contralto", "soprano", "bass", "baritone", "tenor"};
 
-void Waiter::Set()
+void Waiter::Get()
 {
-    Worker::Set();
     int i = 0;
     for (i; i < Vtype; i++)
     {
@@ -56,8 +66,32 @@ void Waiter::Set()
     while (cin.get() != '\n');
 }
 
+void Waiter::Data() const
+{
+    cout << "voice    is " << pv[voice] << endl;
+}
+
+void Waiter::Set()
+{
+    Worker::Get();
+    Get();
+}
+
 void Waiter::Show() const
 {
-    Worker::Show();
-    cout << "voice    is " << pv[voice] << endl;
+    Worker::Data();
+    Data();
+}
+
+void Singingwaiter::Set()
+{
+    Worker::Get();
+    Singer::Get();
+    Waiter::Get();
+}
+void Singingwaiter::Show() const
+{
+    Worker::Data();
+    Singer::Data();
+    Waiter::Data();
 }
